@@ -1,7 +1,7 @@
 import development from './development';
 import production from './production';
 
-const config = {};
+let config = {};
 
 switch (process.env.NODE_ENV) {
     case 'production':

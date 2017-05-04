@@ -9,9 +9,212 @@
         <meta name="application-name" content="Captive Labs">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1, maximum-scale=1.5">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,800" rel="stylesheet">
+
+        <style>
+            @font-face {
+                font-family: 'Geomanist';
+                src: url('./static/fonts/geo/geo.eot');
+                src: url('./staitc/fonts/geo/geo.woff2') format('woff2'),
+                     url('./static/fonts/geo/geo.woff') format('woff'),
+                     url('./static/fonts/geo/geo.ttf') format('truetype');
+            }
+
+            body {
+                height: 100vh;
+                margin: 0;
+            }
+
+            main {
+                height: 100vh;
+                position: relative;
+            }
+
+            .landing-video-container {
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .landing-first-text-container {
+                position: absolute;
+                bottom: 35%;
+                right: 200px;
+                width: 350px;
+            }
+
+            .landing-first-text-container h1 {
+                color: #fff;
+                font-family: 'Fira Sans';
+                font-weight: 700;
+                font-size: 54px;
+                letter-spacing: 2px;
+                line-height: 65px;
+                margin-bottom: 25px;
+                opacity: 0;
+                transform: translateY(60px);
+                transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+            }
+
+            .landing-first-text-container h1.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .landing-first-text-container p {
+                color: #fff;
+                font-family: 'Geomanist';
+                font-size: 17px;
+                font-weight: normal;
+                line-height: 25px;
+                width: 90%;
+                opacity: 0;
+                transform: translateY(60px);
+                transition: transform 0.6s ease-out, opacity 0.4s ease-out;
+            }
+
+            .landing-first-text-container p.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .landing-first-page-change {
+                position: absolute;
+                bottom: 140px;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 70px;
+            }
+
+            .landing-first-page-button {
+                width: 70px;
+                height: 70px;
+            }
+
+            .landing-first-page-button button {
+                height: 110px;
+                width: 110px;
+                background: transparent;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .landing-first-page-button p {
+                postion: absolute;
+                left: 50%;
+                top: 50%;
+                font-family: 'Geomanist';
+                font-weight: normal;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        </style>
     </head>
 
     <body>
-        <p>Test</p>
+        <main>
+            <section class='landing-first-view'>
+                <div class='landing-video-container'>
+                </div>
+
+                <header class='landing-first-text-container'>
+                    <h1 class='landing-first-header'>Designed to be the future</h1>
+                    <p class='landing-first-text'>Captive Labs is a creative digital agency. We are specialists in SEO, Brand Design, Marketing, Anlytics, and Development who love building applications, brands, and engaging customer experiences</p>
+                </header>
+
+                <div class='landing-first-page-change'>
+                    <div class='landing-first-page-button'>
+                        <button id='landing-change-page' type='button'>
+                            <p>Start</p>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const videoContainer = document.querySelector('.landing-video-container');
+            const videoHeader = document.querySelector('.landing-first-header');
+            const videoText = document.querySelector('.landing-first-text');
+
+            let img = document.createElement('img');
+            let video = document.createElement('video');
+            let docFrag = document.createDocumentFragment();
+            let timeout1;
+            let timeout2;
+
+            img.classList.add('landing-video-image');
+            video.classList.add('landing-video-video');
+
+
+            load().then(() => {
+                timeout1 = setTimeout(() => {
+                    videoHeader.classList.add('active');
+                    timeout2 = setTimeout(() => {
+                        videoText.classList.add('active');
+                    }, 500);
+                }, 1500);
+
+                timeout1();
+            })
+            .then(() => {
+                clearTimeout(timeout1);
+                clearTimeout(timeout2);
+            });
+
+            function load() {
+                return new Promise(resolve => {
+                    if (window.innerWidth <= 800 || document.documentElement.clientWidth <= 800) {
+                        handleMobile();
+                    } else {
+                        handleDesktop();
+                    }
+
+                    resolve();
+                });
+            }
+
+
+            function checkMobile() {
+                if (window.innerWidth <= 800 || document.documentElement.clientWidth <= 800) {
+                    handleMobile();
+                } else {
+                    handleDesktop();
+                }
+            };
+
+            function handleMobile() {
+                let landingVideo = document.querySelector('.landing-video-video');
+
+                if (landingVideo) {
+                    landingVideo.parentNode.removeChild(landingVideo);
+                }
+
+                img.alt = 'Video Background';
+                img.src = './static/images/landing-video-background.jpg';
+
+                docFrag.appendChild(img);
+                videoContainer.appendChild(docFrag);
+            }
+
+            function handleDesktop() {
+                let landingBackground = document.querySelector('landing-video-image');
+
+                if (landingBackground) {
+                    landingBackground.parentNode.removeChild(landingBackground);
+                }
+
+                video.src = './static/videos/landing-video.mp4';
+                video.setAttribute('loop', 'true');
+                video.play();
+
+                docFrag.appendChild(video);
+                videoContainer.appendChild(docFrag);
+            }
+        </script>
     </body>
 </html>
