@@ -9,7 +9,8 @@
         <meta name="application-name" content="Captive Labs">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1, maximum-scale=1.5">
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,800|Lato:300" rel="stylesheet">
+        <link href='./static/styles/main.css' rel='stylesheet'>
 
         <style>
             @font-face {
@@ -96,7 +97,11 @@
             main {
                 height: 100vh;
                 position: relative;
-                overflow: hidden;
+                overflow-y: hidden;
+            }
+
+            main.transitioning {
+                overflow-y: visible;
             }
 
             main.transitioning .landing-first-view {
@@ -204,7 +209,7 @@
 
             .landing-first-svg-text.active {
                 opacity: 1;
-                transform: translate(2px, -83px);
+                transform: translate(2px, -68px);
             }
 
             .landing-main-content {
@@ -245,8 +250,71 @@
             </section>
 
             <section class='landing-main-content'>
-                <header class='landing-main-header'>
+                <header class='landing-main-header parallax'>
+                    <div class='landing-main-header-overlay'>
+                        <h1>A comprehensive approach to innovative solutions</h1>
+                        <p>We're an interactive agency whose passion and experience in implementing mobile and online solutions can help your business achieve its goals. We professionally develop and implement strategies as well as support your online presence.</p>
+                        <p>We believe in the power of online marketing, and that's why we make it the focus of our interactive services.</p>
+
+                        <a href='/'>
+                            <span>How are we different?</span>
+                        </a>
+                    </div> 
                 </header>
+
+                <section class='landing-features-list'>
+                    <div>
+                        <figure class='landing-feature design'>
+                            <img class='icon design' src='./static/icons/design-icon.png' alt='User Experience Design'>
+                            <h2>User Experience Design</h2>
+                            <p>Great design starts with putting people first. Work with us and you'll benefit from a collaborative user experience design approach that promises improved usability, accessibility and efficiency</p>
+                        </figure>
+
+                        <figure class='landing-feature development'>
+                            <img class='icon development' src='./static/icons/development-icon.png' alt='Pixel-perfect Development'>
+                            <h2>Pixel-perfect Development</h2>
+                            <p>We're not joking when we say we've considered every detail. That's right, down to each individual pixel. When you see a design, this is exactly how your website will look, complete with stunning animation and effects.</p>
+                        </figure>
+
+                        <figure class='landing-feature support'>
+                            <img class='icon support' src='./static/icons/support-icon.png' alt='Complete Support'>
+                            <h2>Complete Support</h2>
+                            <p>Once your product has launched it's not goodbye. We're here to support any changes, provide analytics, asses performance and discuss future improvements, and we're always at the end of the phone if you need us</p>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class='landing-about'>
+                    <div class='landing-about-wrapper'>
+                        <figure class='landing-about-image'>
+                            <img src='./static/images/landing-about.jpg' alt="About Us">
+                            <p>
+                                Creative
+                                <br>
+                                Passionate
+                                <br>
+                                Effective
+                            </p>
+                        </figure>
+
+                        <aside class='landing-about-text'>
+                            <h3>We're passionate about creating extraordinary digital experiences</h3>
+                            <p>Every web design and development project or digital marketing campaign we undertake tied in with our core values</p>
+                            <p>We're proud of relationships and strive to work towards a collaborative challenging, honest and fun environment with every client</p>
+                            <p>After all, success in life means living by your values</p>
+
+                            <a href='/about'>
+                                <span>About us</span>
+                            </a>
+                        </aside>
+                    </div>
+
+                    <div class='landing-about-background'>
+                        <span class='band white first-band'></span>
+                        <span class='band blue_1 second-band'></span>
+                        <span class='band blue_2 third-band'></span>
+                    </div>
+                </section>
             </section>
         </main>
 

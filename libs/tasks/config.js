@@ -1,6 +1,6 @@
 const config = {
     dev: {
-        styles: './public/static/styles/**',
+        styles: './public/static/styles/**/*.sass',
         mainSass: './public/static/styles/main.sass',
         css: './public/static/styles'
     },

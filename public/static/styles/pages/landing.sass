@@ -1,3 +1,333 @@
+
 .landing-main-header
+    position: relative
+    height: 100vh
+    width: 100%
     background-image: url('../images/landing-main-header-background.jpg')
-    background-position: 0 0
+    background-position: 0 50%
+    background-size: cover
+
+.landing-main-header-overlay
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 35%
+    text-align: center
+    margin: 0 auto
+
+    h1
+        color: #fff
+        font-family: 'Fira Sans'
+        font-weight: 500
+        font-size: 40px
+        width: 90%
+        line-height: 52px
+        margin-bottom: 20px
+
+    p
+        color: #fff
+        font-family: 'Geomanist'
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        text-align: center
+
+        &:nth-of-type(1)
+            margin-bottom: 20px
+
+    a
+        display: inline-block
+        position: relative
+        cursor: pointer
+        width: 235px
+        padding: 15px 0
+        border-radius: 2px
+        margin-top: 45px
+        background: #fff
+        color: #2c4960
+        box-shadow: 0 0 100px 0 rgba(0,0,0,0.1)
+        text-decoration: none
+        overflow: hidden
+
+        &:before,
+        &:after
+            content: ""
+            position: absolute
+            top: -250px
+            right: -250px
+            width: 500px
+            height: 500px
+            opacity: 1
+            border-radius: 100%
+            transform: scale(0)
+            transition: all .5s ease
+            z-index: 1
+
+        &:before
+            background: #dbefff
+
+        &:after
+            background: inherit
+            z-index: 2
+            transition-delay: .15s
+
+        &:hover
+            box-shadow: 0 0 120px 0 rgba(0,0,0,0.25)
+
+            &:before,
+            &:after
+                transform: scale(1)
+                opacity: 1
+
+        span
+            display: block
+            position: relative
+            font-family: 'Fira Sans'
+            font-weight: 500
+            font-size: 14px
+            letter-spacing: 1px
+            text-transform: uppercase
+            transition: all .5s ease
+            z-index: 3
+
+.landing-features-list > div
+    display: flex
+    align-items: center
+    width: 80%
+    padding: 130px 0
+    margin: 0 auto
+
+.landing-feature
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 29.333%
+    margin: 0 2%
+    height: 300px
+
+.landing-feature
+    padding: 0 40px 35px
+    text-align: center
+    border-radius: 3px
+    color: rgba(255, 255, 255, 0.8)
+
+    h2
+        font-family: 'Fira Sans'
+        font-weight: 500
+        letter-spacing: 1px
+        font-size: 21px
+        margin: 20px 0 10px
+        color: #1b222a
+
+    p
+        font-family: 'Geomanist'
+        font-weight: normal
+        font-size: 15px
+        line-height: 22px
+        color: #8895a6
+
+    span
+        display: block
+        margin-top: 10px
+        font-family: 'Geomanist'
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+
+    .icon
+        display: block
+        width: 62px
+        height: auto
+        border-radius: 100%
+        box-shadow: 0 0 50px 0 rgba(0,0,0,0.1)
+        transform: translateY(-30px)
+
+
+.icon.design
+    background: #4daaf2
+
+.icon.development
+    background: #36ceb0
+
+.icon.support
+    background: #7259cd
+
+.landing-about
+    position: relative
+    z-index: 1
+
+.landing-about-wrapper
+    display: flex
+    align-items: center
+    position: relative
+    width: 52%
+    margin: 0 auto
+    z-index: 3
+
+.landing-about-image
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    width: 70%
+    height: 600px
+    margin: 173px 60px 150px 0
+    border-radius: 4px
+    overflow: hidden
+
+    img
+        width: 100%
+        height: 600px
+
+    p
+        position: absolute
+        bottom: 30px
+        left: 50px
+        font-family: 'Fira Sans'
+        font-weight: 400
+        font-size: 50px
+        line-height: 58px
+        letter-spacing: 1px
+        color: #fff
+        z-index: 2
+
+.landing-about-text
+    width: 60%
+    margin-right: 2%
+
+    h3
+        font-family: 'Fira Sans'
+        font-weight: 400
+        font-size: 26px
+        line-height: 42px
+        color: #fff
+        margin: 0 0 20px
+
+    p
+        font-family: 'Geomanist'
+        font-weight: normal
+        font-size: 17px
+        line-height: 26px
+        margin: 0 0 20px
+        color: #cbe6fb
+        width: 95%
+
+    a
+        display: inline-block
+        text-decoration: none
+        width: 235px
+        margin-top: 15px
+        padding: 15px 0
+        font-family: 'Fira Sans'
+        font-weight: 400
+        font-size: 14px
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 1px
+        position: relative
+        cursor: pointer
+        box-shadow: 0 0 100px 0 rgba(0,0,0,0.1)
+        border-radius: 2px
+        transition: all .5s ease
+        background: #fff
+        overflow: hidden
+        color: #5fade9
+
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            top: -250px
+            right: -250px
+            width: 500px
+            height: 500px
+            border-radius: 100%
+            z-index: 1
+            opacity: 1
+            transition: all .5s ease
+            transform: scale(0)
+
+        &:before
+            background: #dbefff
+
+        &:after
+            background: inherit
+            z-index: 2
+            transition-delay: .15s
+
+        span
+            position: relative
+            display: block
+            z-index: 3
+            transition: all .5s ease
+
+        &:hover
+            box-shadow: 0 0 120px 0 rgba(0,0,0,0.25)
+
+            &:before,
+            &:after
+                transform: scale(1)
+                opacity: 1
+
+            span
+                transform: scale(1.1)
+
+.landing-about-background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    background: #5fade9
+
+.band
+    position: absolute
+    width: 140%
+    height: 800px
+    z-index: 1
+
+.first-band
+    right: 0
+    top: -800px
+    background: #fff
+    transform: rotate(-12deg)
+    transform-origin: bottom right
+
+.second-band
+    right: 0
+    top: 33.333%
+    width: 60%
+    height: 33.333%
+    background: linear-gradient(to right, rgba(95, 173, 233, 1) 0, rgba(90, 168, 228, 1) 100%)
+    transform: rotate(-12deg)
+    transform-origin: top right
+
+.third-band
+    right: 0
+    top: 66.666%
+    height: 33.333%
+    width: 75%
+    background: linear-gradient(to right, rgba(95, 173, 233, 1) 0, rgba(84, 162, 222, 1) 100%)
+    transform: rotate(-12deg)
+    transform-origin: top right
+
+
+
+@media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi)
+    .landing-main-header-overlay
+        a:hover
+            transform: scale(1.05) translateZ(0)
+
+            span
+                transform: scale(1.1)
+
+    .landing-about-text
+        a:hover
+            transform: scale(1.05) translateZ(0)
+
+            span
+                transform: scale(1.1)
+
