@@ -1,0 +1,70 @@
+<section class='landing-development-section'>
+    <div class='wrapper standard'>
+        <div class='intro'>
+            <header class='landing-development-header'>
+                <img src='./static/icons/development-icon.png'>
+                <h2>pixel-perfect development</h2>
+            </header>
+            <h3>Every website web develop is coded by hand, focusing on flawless use experience and lightning fast load speeds</h3>
+
+            <div class='landing-development-bottom'>
+                <div>
+                    <p>Whether you're looking for a branch new website or application, we're the team for you. All of our websites are mobile-friendly, and built with the recommended tools for your project ensuring really simple editing
+                    </p>
+                    <p>We work with Jekyll, Magneto, React, Angular, and Vue on the front end, and our backend is based on Node, MongoDB, Reddis, Pouch and many other tools</p>
+                    <p>Our developers are deticated to performant hosting and tools like Elastic Search, S3, and Cloudflare ensuring your product loads fast no matter where your user is from</p>
+
+                    <a class='btn btn-link'>
+                        <span>Find out More</span>
+                    </a>
+                </div>
+
+                <div class='development-code'>
+                    <div class='development-code-top'>
+                        <span class='red'></span>
+                        <span class='yellow'></span>
+                        <span class='green'></span>
+                    </div>
+
+                    <span class='editor-shadow-right'></span>
+                    <span class='editor-shadow-bottom'></span>
+                        <div class='editor-code'>
+                            <div class='numbers'></div>
+                            <pre class='first hljs js'>
+                                    <span class='keyword'>class</span> <span class='title'>Profile</span> <span class='keyword'>extends</span> <span class='title'>React.Component {</span>
+                                        &emsp;<span class='keyword'>constructor(</span><span class='function-input'>props</span><span class='paren'>) {</span>
+                                        &emsp;&emsp;<span class='keyword'>super</span><span class='paren'>(</span><span class='function-input'>props</span><span class='paren'>)</span>;
+                                        &emsp;<span class='paren'>}</span>
+
+                                        &emsp;<span class='function'>componentDidMount() {</span>
+                                            &emsp;&emsp;<span class='this'>this</span><span class='dot'>.</span><span class='variable'>props</span><span class='dot'>.</span><span class='function'>loadUser</span><span class='paren'>();</span>
+                                        &emsp;<span class='paren'>}</span>
+
+                                        &emsp;<span class='function'>render() {</span>
+                                            &emsp;&emsp;<span class='return'>return</span> <span class='paren'>(</span>
+                                                &emsp;&emsp;&emsp;<span class='paren'>{</span><span class='this'>this</span><span class='dot'>.</span><span class='variable'>props</span><span class='dot'>.</span><span class='variable'>user</span> <span class='operator'>?</span> <span class='this'>this</span><span class='dot'>.</span><span class='variable'>props</span><span class='dot'>.</span><span class='variable'>user</span><span class='dot'>.</span><span class='variable'>name</span> <span class='operator'>:</span> <span class='type'>null</span><span class='paren'>}</span>
+                                            &emsp;&emsp;<span class='paren'>);</span>
+                                        &emsp;<span class='paren'>}</span>
+                                    <span class='paren'>}</span>
+
+                                    <span class='variable-assign'>const</span> <span class='variable'>mapDispatchToProps</span> <span class='operator'>=</span> <span class='function-input'>dispatch</span> <span class='arrow-function'>=></span> <span class='paren'>{</span>
+                                    &emsp;<span class='return'>return</span> <span class='paren'>{</span>
+                                        &emsp;&emsp;<span class='function'>loadUser: ()</span> <span class='arrow-function'>=></span> <span class='paren'>{</span>
+                                            &emsp;&emsp;&emsp;<span class='this'>dispatch</span><span class='function'>(getUser());</span>
+                                        &emsp;&emsp;<span class='paren'>}</span>
+                                    &emsp;<span class='paren'>};</span>
+                                <span class='paren'>};</span>
+
+                                <span class='return'>export default</span> <span class='title'>Profile</span>;
+                            </pre>
+                        </div>
+
+                        <div class='code-spacer'></div>
+
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
