@@ -1,3 +1,62 @@
+// shared
+
+.button-link
+    display: inline-block
+    width: 235px
+    padding: 15px 0
+    text-align: center
+    border-radius: 2px
+    color: #2c4960
+    text-transform: uppercase
+    position: relative
+    cursor: pointer
+    box-shadow: 0 0 100px 0 rgba(0,0,0,0.1)
+    transition: all .5s ease
+    cursor: pointer
+    overflow: hidden
+    text-decoration: none
+
+    span
+        position: relative
+        z-index: 3
+        display: block
+        transition: all .5s ease
+        font-family: 'Fira Sans'
+        font-weight: 400
+        font-size: 14px
+        letter-spacing: 1px
+
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: -250px
+        right: -250px
+        width: 500px
+        height: 500px
+        background: rgba(0,0,0,0.15)
+        border-radius: 100%
+        opacity: 1
+        z-index: 1
+        transform: scale(0)
+        transition: all .5s ease
+
+    &:after
+        background: inherit
+        z-index: 2
+        transition-delay: 0.15s
+
+    &:hover
+        box-shadow: 0 0 120px 0 rgba(0,0,0,0.25)
+
+        span
+            transform: scale(1.1)
+
+        &:before,
+        &:after
+            transform: scale(1)
+
+
 
 .landing-main-header
     position: relative
@@ -92,57 +151,67 @@
             transition: all .5s ease
             z-index: 3
 
-.landing-features-list > div
-    display: flex
-    align-items: center
-    width: 80%
-    padding: 130px 0
+.landing-features-list
+    width: 1000px
     margin: 0 auto
+
+    > div:nth-of-type(1)
+        display: flex
+        width: 108%
+        margin: 0 0 0 -4%
+        padding: 150px 0 60px
+
 
 .landing-feature
     display: flex
     flex-direction: column
-    align-items: center
-    width: 29.333%
-    margin: 0 2%
-    height: 300px
-
-.landing-feature
-    padding: 0 40px 35px
-    text-align: center
-    border-radius: 3px
-    color: rgba(255, 255, 255, 0.8)
+    flex: 1
+    width: 25.333%
+    margin: 0 4%
+    color: #8895a6
 
     h2
         font-family: 'Fira Sans'
-        font-weight: 500
-        letter-spacing: 1px
-        font-size: 21px
+        font-weight: 400
+        letter-spacing: -.03em
+        font-size: 20px
         margin: 20px 0 10px
         color: #1b222a
 
     p
-        font-family: 'Geomanist'
-        font-weight: normal
-        font-size: 15px
-        line-height: 22px
+        font-family: 'Lato'
+        font-size: 17px
+        line-height: 1.55em
+        font-weight: 300
         color: #8895a6
 
     span
         display: block
         margin-top: 10px
-        font-family: 'Geomanist'
-        font-weight: normal
+        font-family: 'Lato'
+        font-weight: 500
+        letter-spacing: 1px
         font-size: 12px
         line-height: 15px
+        cursor: pointer
 
     .icon
         display: block
         width: 62px
         height: auto
         border-radius: 100%
-        box-shadow: 0 0 50px 0 rgba(0,0,0,0.1)
-        transform: translateY(-30px)
+
+    &.design
+        span
+            color: #4daaf2
+
+    &.development
+        span
+            color: #36ceb0
+
+    &.support
+        span
+            color: #7259cd
 
 
 .icon.design
@@ -160,9 +229,8 @@
 
 .landing-about-wrapper
     display: flex
-    align-items: center
     position: relative
-    width: 52%
+    width: 1000px
     margin: 0 auto
     z-index: 3
 
@@ -171,31 +239,39 @@
     flex-direction: column
     align-items: center
     position: relative
-    width: 70%
-    height: 600px
-    margin: 173px 60px 150px 0
+    width: 50%
+    height: 650px
+    margin: 150px 0
     border-radius: 4px
+    box-shadow: 0 0 200px 0 rgba(0,0,0,0.2)
     overflow: hidden
 
     img
-        width: 100%
-        height: 600px
+        position: absolute
+        width: auto
+        height: 650px
+        left: -75.6513px
+        top: 0
+        display: block
+        z-index: 1
 
     p
         position: absolute
-        bottom: 30px
+        margin: 0
+        bottom: 50px
         left: 50px
-        font-family: 'Fira Sans'
-        font-weight: 400
-        font-size: 50px
-        line-height: 58px
-        letter-spacing: 1px
-        color: #fff
         z-index: 2
+        color: #fff
+        line-height: 72px
+        font-weight: 500
+        font-family: 'Lato'
+        font-size: 65px
 
 .landing-about-text
-    width: 60%
+    width: 40%
     margin-right: 2%
+    margin-left: 5%
+    padding-top: 280px
 
     h3
         font-family: 'Fira Sans'
@@ -314,20 +390,782 @@
     transform: rotate(-12deg)
     transform-origin: top right
 
+.landing-design-section
+    position: relative
+    padding: 140px 0 110px
+    background: #2b3643
+    z-index: 1
 
+    > div
+        display: flex
+        align-items: center
+        position: relative
+        margin: 0 auto
+        width: 50%
+        z-index: 3
+
+.landing-design-text
+    width: 55%
+
+    > h3
+        font-family: 'Lato'
+        font-size: 25px
+        font-weight: 300
+        color: #fff
+        line-height: 35px
+        margin-bottom: 36px
+
+    > p
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 19px
+        line-height: 24px
+        margin-bottom: 28px
+        color: #a0b1c5
+
+        &:nth-of-type(2)
+            margin-bottom: 35px
+
+
+.landing-design-header
+    display: flex
+    align-items: center
+    margin: 0 0 30px
+
+    > img
+        display: block
+        width: 62px
+        border-radius: 100%
+        background: #4daaf2
+        margin-right: 18px
+
+    h2
+        font-family: 'Fira Sans'
+        font-weight: 400
+        line-height: 28px
+        font-size: 26px
+        color: #62a0d1
+
+
+.button-link.landing-design-button
+    background: #4daaf2
+    color: #fff
+
+.landing-design-phone
+    position: relative
+    width: 325px
+    height: 600px
+    padding: 65px 15px
+    background: #11161d
+    box-shadow: 0 0 200px 0 rgba(0,0,0,0.3)
+    border-radius: 25px
+    opacity: 1
+    transform: translate(120px, -235px)
+
+    .phone-camera
+        position: absolute
+        display: block
+        top: 29px
+        left: 50%
+        width: 7px
+        height: 7px
+        border-radius: 100%
+        background: #000
+        margin-left: -48px
+
+    .phone-speaker
+        position: absolute
+        top: 31px
+        left: 50%
+        display: block
+        width: 44px
+        height: 3px
+        border-radius: 4px
+        margin-left: -22px
+        background: #000
+
+    .phone-shadow
+        width: 295px
+        height: 460px
+        position: absolute
+        top: 65px
+        left: 15px
+        z-index: 2
+        pointer-events: none
+        box-shadow: inset 0 0 50px 0 rgba(0,0,0,0.75)
+
+.phone-screen
+    width: 295px
+    height: 460px
+    background: #000
+    overflow: hidden
+    position: relative
+    margin-right: 0
+
+.phone-screen-inner
+    width: 100%
+    height: 100%
+    position: relative
+    overflow: hidden
+    z-index: 1
+
+    .slide
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+        box-shadow: 0 0 100px 0 rgba(0,0,0,1)
+        z-index: 1
+        transition: left 1s ease-in-out
+
+        img
+            width: 100%
+            position: relative
+            display: block
+            pointer-events: none
+
+.phone-button
+    display: block
+    position: absolute
+    bottom: 22px
+    left: 50%
+    background: #000
+    width: 30px
+    height: 30px
+    margin-left: -12px
+    border-radius: 100%
+
+.landing-development-section
+    position: relative
+    padding: 120px 0 20px
+    background: #1b222a
+    z-index: 4
+
+    > div
+        width: 60%
+        margin: 0 auto
+
+.landing-development-text
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h3
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 25px
+        line-height: 34px
+        margin-bottom: 36px
+        color: #fff
+        width: 70%
+        text-align: center
+
+.landing-development-header
+    display: flex
+    align-items: center
+    position: relative
+    margin-bottom: 25px
+
+    img
+        width: 62px
+        height: auto
+        display: block
+        border-radius: 100%
+        pointer-events: none
+        background: #36ceb0
+        margin-right: 12px
+
+    h2
+        font-family: 'Fira Sans'
+        font-weight: 400
+        font-size: 22px
+        line-height: 26px
+        color: #9ed9c4
+
+.landing-development-bottom
+    display: flex
+    align-items: center
+    flex-direction: row-reverse
+
+    > div:nth-of-type(1)
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: 35%
+        margin-left: 2.5%
+
+    p
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 19px
+        line-height: 26px
+        margin-bottom: 24px
+        color: #a0b1c5
+
+.development-button
+    background: #36ceb0
+    color: #fff
+
+.development-code
+    width: 65%
+    height: 610px
+    margin-right: 2.5%
+    background: #232b35
+    border-radius: 3px
+    overflow: hidden
+    z-index: 4
+    transition: opacity 0.75s ease, transform 0.75s ease
+    position: relative
+    transform: translateY(80px)
+
+.development-code-top
+    position: relative
+    display: flex
+    align-items: center
+    width: 100%
+    background: #1e252e
+    height: 44px
+    z-index: 5
+
+    > span
+        width: 13px
+        height: 13px
+        margin: 0 6px
+        display: block
+        border-radius: 100%
+
+    .red
+        margin-left: 18px
+        background: #fc635d
+
+    .yellow
+        background: #fdbc40
+
+    .green
+        background: #34c84a
+
+.editor-shadow-right
+    position: absolute
+    bottom: 0
+    right: 0
+    pointer-events: none
+    width: 140px
+    height: 100%
+    z-index: 3
+    background: linear-gradient(to right, rgba(35, 43, 53, 0) 0, rgba(35, 43, 53, 1) 90%)
+
+.editor-shadow-bottom
+    position: absolute
+    bottom: 0
+    right: 0
+    pointer-events: none
+    width: 100%
+    height: 140px
+    z-index: 3
+    background: linear-gradient(to bottom, rgba(35, 43, 53, 0) 0, rgba(35, 43, 53, 1) 90%)
+
+.editor-code
+    .first
+        text-align: left
+        white-space: pre-line
+        margin-top: 10px
+        margin-left: 15px
+
+.landing-support-section
+    position: relative
+    z-index: 1
+    padding: 150px 0 100px
+
+    > div:nth-of-type(1)
+        display: flex
+        align-items: center
+        position: relative
+        z-index: 3
+        width: 56%
+        margin: 0 auto
+
+.landing-support-intro
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 64%
+    margin-bottom: 30px
+
+    h3
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 25px
+        color: #fff
+        line-height: 30px
+        margin-bottom: 20px
+
+    p
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 25px
+        color: #a0b1c5
+        line-height: 30px
+        margin-bottom: 20px
+
+.landing-support-header
+    display: flex
+    align-items: center
+    width: 100%
+    margin-bottom: 35px
+
+    img
+        height: 62px
+        display: block
+        border-radius: 100%
+        pointer-events: none
+        margin-right: 12px
+        background: #7259cd
+
+    h2
+        color: #d1c7f3
+        font-family: 'Fira Sans'
+        font-weight: 400
+        font-size: 24px
+        line-height: 32px
+
+.messages-container
+    width: 300px
+    margin-left: 5%
+
+.message
+    display: flex
+    flex-direction: column
+    margin-bottom: 28px
+    padding: 0 0 0 45px
+    position: relative
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        width: 25px
+        height: auto
+        border-radius 3px
+        display: block
+        box-shadow: 0 0 50px 0 rgba(0,0,0,0.2)
+
+    &.alt
+        padding: 0 45px 0 0
+        left: -25px
+
+        .message-content
+            background: #fff
+
+            .arrow
+                left: auto
+                right: -6px
+                border-left: 8px solid #fff
+                border-right: none
+
+            .text-title
+                width: 60%
+                background: #778ca4
+
+            .text
+                backgrund: #abbdd1
+
+                &:nth-of-type(3)
+                    transition-delay: .3s
+
+                &:nth-of-type(4)
+                    width: 75%
+                    transition-delay: .4s
+
+                &:nth-of-type(5)
+                    width: 70%
+                    transition-delay: .5s
+
+                &:nth-of-type(6)
+                    width: 65%
+                    transition-delay: .6s
+
+                &:nth-of-type(7)
+                    width: 52%
+                    transition-delay: .7s
+
+                &:nth-of-type(8)
+                    width: 60%
+                    transition-dekay: .8s
+
+                &:nth-of-type(9)
+                    width: 40%
+                    transition-delay: .9s
+
+
+.message-content
+    position: relative
+    background: #7259cd
+    border-radius: 3px
+    padding: 20px 20px 12px
+    box-shadow: 0 0 150px 0 rgba(0,0,0,0.2)
+
+.arrow
+    width: 0
+    height: 0
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+    border-right: 8px solid #7259cd
+    display: block
+    position: absolute
+    top: 7px
+    left: -6px
+
+.text
+    width: 30px
+    height: 5px
+    margin-bottom: 8px
+    background: #5d43b2
+    display: block
+    border-radius: 3px
+    transition: all .5s ease
+
+    &:nth-of-type(2)
+        transition-delay: .2s
+        width: 50%
+
+    &:nth-of-type(3)
+        width: 60%
+
+    &:nth-of-type(4)
+        width: 65%
+
+    &:nth-of-type(5)
+        width: 62%
+
+    &:nth-of-type(6)
+        width: 70%
+
+    &:nth-of-type(7)
+        width: 50%
+
+    &.title
+        width: 70%
+        margin-bottom: 12px
+        background: #4b3892
+
+.support-background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    background: #2b3642
+
+    > span
+        width: 140%
+        height: 800px
+        position: absolute
+        background: #fff
+        left: 0
+        z-index: 1
+        bottom: -800px
+        transform: rotate(-12deg)
+        transform-origin: top left
+
+.landing-help
+    position: relative
+    padding: 60px 0 175px
+    z-index: 2
+
+    > div:nth-of-type(1)
+        width: 750px
+        margin: 0 auto
+
+.landing-help-content
+    position: relative
+    background: #fff
+    overflow: hidden
+    padding: 60px 70px 50px
+    border-radius: 3px
+    box-shadow: 0 10px 50px 0 rgba(0,0,0,0.04)
+    z-index: 3
+
+.landing-help-inner
+    position: relative
+    display: flex
+    z-index: 2
+
+.landing-help-intro
+    width: 50%
+    z-index: 3
+
+    h3
+        color: #64bbc5
+        font-size: 25px
+        font-family: 'Lato'
+        font-weight: 300
+        line-height: 29px
+        margin: 0 0 20px
+
+    p
+        font-size: 19px
+        font-weight: 300
+        line-height: 25px
+        font-family: 'Lato'
+        margin: 0 0 20px
+        color: #8895a6
+
+.landing-help-links
+    width: 42%
+    padding: 15px 0 0
+
+    a
+        position: relative
+        display: flex
+        align-items: center
+        height: 55px
+        margin: 0 0 30px
+        padding: 0 0 0 75px
+        font-weight: 300
+        font-family: 'Lato'
+        font-size: 20px
+        line-height: 22px
+        text-decoration: none
+        color: #a0b1c5
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            height: 55px
+            width: auto
+            pointer-events: none
+            border-radius: 100%
+            background: #e7f8fa
+
+            span
+                padding: 15px 0 0
+                display: block
+
+.landing-help-bands
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+
+.landing-help-band
+    width: 50%
+    height: 125px
+    position: absolute
+    top: 0
+    transform-origin: bottom left
+    transform: rotate(-12deg)
+    z-index: 1
+
+    &.band-1
+        width: 60%
+        background: linear-gradient(to right, rgba(235, 249, 251, 1) 30%, rgba(235, 249, 251, 0) 100%)
+
+    &.band-2
+        width: 70%
+        top: 125px
+        background: linear-gradient(to right, rgba(248, 252, 255, 1) 30%, rgba(248, 252, 255, 0) 100%)
+
+
+.landing-help-background
+    position: absolute
+    top: -170px
+    left: 0
+    overflow: hidden
+    width: 100%
+    height: 160%
+    z-index: 1
+
+.landing-help-band-background
+    height: 240px
+    position: absolute
+    transform-origin: top right
+    transform: rotate(-12deg)
+    right: 0
+
+.background-band-1
+    width: 50%
+    top: 0
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0, rgba(246, 249, 252, 1) 100%)
+
+.background-band-2
+    width: 90%
+    top: 245px
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0, rgba(231, 248, 250, 1) 100%)
+
+.background-band-3
+    width: 70%
+    top: 490px
+    opacity: 0.8
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0, rgba(246, 249, 252, 1) 100%)
+
+.landing-contact
+    position: relative
+    z-index: 2
+
+    > div:nth-of-type(1)
+        width: 1000px
+        margin: 0 auto
+
+.landing-contact-intro
+    width: 90%
+    max-width: 600px
+    text-align: center
+    margin: 0 auto
+    margin-bottom: 80px
+
+    h2
+        font-family: 'Fira Sans'
+        font-weight: 400
+        letter-spacing: -.03em
+        font-size: 25.5px
+        margin: 0 0 20px
+        color: #262c33
+
+    p
+        margin: 0 0 20px
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 19px
+        line-height: 28px
+        color: #8895a6
+
+.landing-contact-form
+    position: relative
+    width: 100%
+
+    > div:nth-of-type(1)
+        position: relative
+        width: 1000px
+        margin: 0 auto
+        z-index: 2
+
+.contact-form
+    padding: 120px 120px 55px
+    background: #fff
+    border-radius: 4px
+    box-shadow: 0 0 200px 0 rgba(0,0,0,0.1)
+
+.form-fields
+    width: 106%
+    margin: 0 0 0 3%
+
+.field
+    position: relative
+    width: 25.333%
+    min-height: 120px
+    display: inline-block
+    margin: 0 3%
+
+    &.full
+        width: 94%
+
+        textarea
+            width: 95%
+
+    label
+        display: block
+        font-size: 12px
+        font-family: 'Lato'
+        font-weight: 300
+        letter-spacing: 2px
+        text-transform: uppercase
+        margin: 0 0 5px
+        color: #617082
+
+    input
+        width: 100%
+        height: 45px
+        padding: 0 18px
+        border: none
+        border-radius: 4px
+        background: #d8dbde
+        box-sizing: border-box
+        color: #262c33
+        font-size: 13px
+        outline: 0
+        font-weight: 300
+        font-family: 'Lato'
+
+    textarea
+        max-width: 100%
+        height: 200px
+        max-height: 200px
+        margin-bottom: 55px
+        padding: 14px 18px
+        border: none
+        border-radius: 4px
+        background: #d8dbde
+        box-sizing: border-box
+        color: #262c33
+        font-size: 13px
+        outline: none
+        font-family: 'Lato'
+        font-weight: 300
+
+    button
+        width: 100%
+        background: #6cb051
+        padding: 20px 0
+        border: none
+        text-align: center
+        display: inline-block
+        border-radius: 2px
+        color: #fff
+        font-size: 12
+        text-transform: uppercase
+        box-shadow: 0 0 100px 0 rgba(0,0,0,0.1)
+        cursor: pointer
+        transition: all .5s ease
+        font-familly: 'Lato'
+        font-weight: 300
+
+        span
+            display: block
+            position: relative
+            z-index: 3
+            transition: all .5s ease
+
+.landing-contact-background
+    position: absolute
+    bottom: -1px
+    left: 0
+    height: 90%
+    width: 100%
+    background: #6cb051
+    z-index: 1
+    overflow: hidden
+    transform: translateZ(0)
+
+    .contact-band
+        width: 140%
+        height: 800px
+        position: absolute
+        z-index: 1
+        transform: rotate(-12deg)
+
+    .contact-band-1
+        background: #fff
+        right: 0
+        top: -800px
+        transform-origin: bottom right
+
+    .contact-band-2
+        background: #262c33
+        left: 0
+        bottom: -800px
+        transform-origin: top left
 
 @media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi)
-    .landing-main-header-overlay
-        a:hover
-            transform: scale(1.05) translateZ(0)
+    .button-link:hover
+        transform: scale(1.05) translateZ(0)
 
-            span
-                transform: scale(1.1)
-
-    .landing-about-text
-        a:hover
-            transform: scale(1.05) translateZ(0)
-
-            span
-                transform: scale(1.1)
+        span
+            transform: scale(1.1)
 

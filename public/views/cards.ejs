@@ -1,0 +1,309 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+        <meta charset='utf-8'>
+        <title>Captive Labs</title>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,800|Lato:300" rel="stylesheet">
+        
+        <style>
+            @font-face {
+                font-family: 'Geomanist';
+                src: url('./static/fonts/geo/geo.eot');
+                src: url('./staitc/fonts/geo/geo.woff2') format('woff2'),
+                     url('./static/fonts/geo/geo.woff') format('woff'),
+                     url('./static/fonts/geo/geo.ttf') format('truetype');
+            }
+
+            .cards-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .card-back {
+                position: relative;
+                width: 40%;
+                height: 320px;
+                margin-bottom: 120px;
+
+            }
+
+            .card-back-image {
+                width: 100%;
+                height: 100%;
+            }
+
+            .card-back-image img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .card-back-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(27,34,42, 0.6);
+            }
+
+            .card-front {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 40%;
+                height: 320px;
+                border: 1px solid rgba(0,0,0,0.23);
+            }
+
+            .card-front-left {
+                display: flex;
+                flex: 1;
+                position: relative;
+                justify-content: center;
+                background: #fff;
+                height: 100%;
+            }
+
+            .card-left-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .card-left-image img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .card-left-overlay {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.85);
+            }
+
+            .card-hexagon-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 120px;
+                height: 69.28px;
+                background-color: #1b222a;
+                margin-top: 60px;
+            }
+
+            .card-hexagon-1:before,
+            .card-hexagon-1:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                border-left: 60px solid transparent;
+                border-right: 60px solid transparent;
+            }
+
+            .card-hexagon-1:before {
+                bottom: 100%;
+                border-bottom: 34.64px solid #1b222a;
+            }
+
+            .card-hexagon-1:after {
+                top: 100%;
+                width: 0;
+                border-top: 34.64px solid #1b222a
+            }
+
+            .card-hexagon-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100px;
+                height: 57.74px;
+                background-color: #2b3643;
+                z-index: 5;
+            }
+
+            .card-hexagon-2:before,
+            .card-hexagon-2:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+            }
+
+            .card-hexagon-2:before {
+                bottom: 100%;
+                border-bottom: 28.87px solid #2b3643;
+            }
+
+            .card-hexagon-2:after {
+                top: 100%;
+                width: 0;
+                border-top: 28.87px solid #2b3643;
+            }
+
+            .card-hexagon-2 h2 {
+                font-size: 43px;
+                letter-spacing: 5px;
+                font-family: 'Fira Sans';
+                font-weight: 500;
+                color: #36ceb0;
+            }
+
+            .card-front-center {
+                position: absolute;
+                top: 27%;
+                left: 44%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                z-index: 2;
+            }
+
+            .card-front-center > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+            }
+
+            .card-front-center > div img {
+                height: 70%;
+                width: 70%;
+                border-radius: 50%;
+            }
+
+            .card-front-center > div:nth-of-type(1) {
+                background: #36ceb0;
+                height: 90px;
+            }
+
+            .card-front-center > div:nth-of-type(2) {
+                background: #2ebda0;
+                height: 90px;
+            }
+
+            .card-front-center > div:nth-of-type(3) {
+                height: 90px;
+                background: #10BDA0;
+            }
+
+            .card-front-right {
+                box-sizing: border-box;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                height: 320px;
+                padding-left: 15px;
+                background-color: #1b222a;
+            }
+
+            .card-front-right h1 {
+                font-size: 24px;
+                font-family: 'Fira Sans';
+                font-weight: 500;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-top: 27px;
+                margin-bottom: 3px;
+                margin-left: 18px;
+                color: #fff;
+            }
+
+            .card-front-underline {
+                height: 0;
+                border-top: 3px solid #36ceb0;
+                margin-bottom: 10px;
+                width: 20%;
+                margin-left: 24px;
+            }
+
+            .card-front-underline:nth-of-type(1) {
+                width: 45%;
+                margin-bottom: 22px;
+                margin-left: 18px;
+            }
+
+            .card-front-right p {
+                font-size: 15px;
+                color: #a0b1c5;
+                font-family: 'Lato';
+                font-weight: 300;
+                letter-spacing: 0.8px;
+                line-height: 14px;
+                margin: 0;
+                margin-bottom: 10px;
+                margin-left: 24px;
+            }
+        </style>           
+    </head>
+
+    <body>
+        <main>
+            <div class='cards-container'>
+                <div class='card-back'>
+                    <div class='card-back-image'>
+                    <img src='../../static/images/landing-video-background.jpg'>
+                    </div>
+
+                    <div class='card-back-overlay'></div>
+                </div>
+
+                <div class='card-front'>
+                    <div class='card-front-left'>
+                        <div class='card-left-image'>
+                            <img src='../../static/images/card1.jpg'>
+                        </div>
+
+                        <div class='card-left-overlay'>
+                            <div class='card-hexagon-1'>
+                                <div class='card-hexagon-2'>
+                                    <h2>CS</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='card-front-center'>
+                        <div>
+                            <img src='../../static/icons/design-icon.png'>
+                        </div>
+                        <div>
+                            <img src='../../static/icons/development-icon.png'>
+                        </div>
+                        <div>
+                            <img src='../../static/icons/support-icon.png'>
+                        </div>
+                    </div>
+
+                    <div class='card-front-right'>
+                        <h1>Captive Studios</h1>
+                        <div class='card-front-underline'></div>
+
+                        <p>+ 918 351 8097</p>
+                        <p>+ 918-577-7965</p>
+                        <div class='card-front-underline'></div>
+                        <p>CaptiveStudios@gmail.com</p>
+                        <p>CaptiveSupport@gmail.com</p>
+                        <div class='card-front-underline'></div>
+                        <p>captive-studios.com</p>
+                        <p>Some-site.com</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>    
