@@ -1,4 +1,7 @@
 .packages-header
+    position: relative
+    padding: 160px 0 180px
+
     .header-content
         width: 100%
         max-width: 800px
@@ -6,14 +9,23 @@
         color: rgba(255, 255, 255, 0.9)
         text-align: left
         opacity: 1
+        position: relative
         transition: opacity .75s ease
         transition-delay: .5s
+        z-index: 2
 
         h1
-            font-size: 35px
-            margin-bottom: 30px
+            font-family: 'Lato'
+            font-weight: 300
+            font-size: 40px
+            line-height: 1.25em
+            margin-bottom: 40px
+
+        p
+            line-height: 26.35px
 
         a
+            margin-top: 40px
             color: #36ceb0
 
     .bg
@@ -23,13 +35,14 @@
         height: 100%
         width: 100%
         z-index: 1
+        overflow: hidden
         background: #36ceb0
 
         img
             position: absolute
             width: auto
-            height: 1225px
-            left: -1225px
+            height: 100%
+            left: 0
             top: 0
             opacity: 1
             z-index: 1
@@ -43,7 +56,7 @@
             left: 0
             z-index: 3
             bottom: -800px
-            width: 140px
+            width: 140%
             height: 800px
 
         .band.under
