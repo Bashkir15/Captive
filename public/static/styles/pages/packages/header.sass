@@ -1,0 +1,56 @@
+.packages-header
+    .header-content
+        width: 100%
+        max-width: 800px
+        margin: 0 auto
+        color: rgba(255, 255, 255, 0.9)
+        text-align: left
+        opacity: 1
+        transition: opacity .75s ease
+        transition-delay: .5s
+
+        h1
+            font-size: 35px
+            margin-bottom: 30px
+
+        a
+            color: #36ceb0
+
+    .bg
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: 1
+        background: #36ceb0
+
+        img
+            position: absolute
+            width: auto
+            height: 1225px
+            left: -1225px
+            top: 0
+            opacity: 1
+            z-index: 1
+            transition: opacity .75s ease
+            transition-delay: .75s
+
+            // top: 0 left: 0
+
+        .band.over
+            background: #fff
+            left: 0
+            z-index: 3
+            bottom: -800px
+            width: 140px
+            height: 800px
+
+        .band.under
+            width: 150%
+            z-index: 2
+            bottom: -700px
+            left: -10%
+            display: none
+            background: #36d2b4
+            transform: rotate(-5deg)

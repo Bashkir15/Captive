@@ -6,8 +6,6 @@
 
     .wrapper
         position: relative
-        width: auto
-        margin: 0 35px
         z-index: 3
 
     .intro
@@ -15,16 +13,14 @@
         color: #a0b1c5
 
         header
+            display: flex
+            align-items: center
             position: relative
             min-height: 62px
             padding-left: 88px
             margin: 0 0 30px
 
             h2
-                position: absolute
-                top: 14%
-                left: 88px
-                max-width: 150px
                 padding: 0
                 margin: 0
                 color: #d1c7f3
@@ -42,6 +38,8 @@
             pointer-events: none
 
         h3
+            font-family: 'Lato'
+            font-weight:  500
             color: #fff
             font-size: 23px
             line-height: 1.4em
@@ -71,3 +69,136 @@
 .messages-container
     display: none
 
+@media screen and (min-width: 1000px)
+    .landing-support-section
+        padding: 150px 0 100px
+
+        .wrapper
+            display: flex
+
+            .intro
+                width: 55%
+                margin-right: 5%
+
+    .messages-container
+        display: flex
+        flex-direction: column
+        position: relative
+        width: 300px
+        top: 50px
+
+        .message
+            display: flex
+            flex-direction: column
+            margin-bottom: 28px
+            padding: 0 0 0 45px
+            position: relative
+
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 25px
+                height: auto
+                border-radius 3px
+                display: block
+                box-shadow: 0 0 50px 0 rgba(0,0,0,0.2)
+
+            &.alt
+                padding: 0 45px 0 0
+                left: -25px
+
+                .message-content
+                    background: #fff
+
+                    .arrow
+                        left: auto
+                        right: -6px
+                        border-left: 8px solid #fff
+                        border-right: none
+
+                    .text-title
+                        width: 60%
+                        background: #778ca4
+
+                    .text
+                        backgrund: #abbdd1
+
+                        &:nth-of-type(3)
+                            transition-delay: .3s
+
+                        &:nth-of-type(4)
+                            width: 75%
+                            transition-delay: .4s
+
+                        &:nth-of-type(5)
+                            width: 70%
+                            transition-delay: .5s
+
+                        &:nth-of-type(6)
+                            width: 65%
+                            transition-delay: .6s
+
+                        &:nth-of-type(7)
+                            width: 52%
+                            transition-delay: .7s
+
+                        &:nth-of-type(8)
+                            width: 60%
+                            transition-dekay: .8s
+
+                        &:nth-of-type(9)
+                            width: 40%
+                            transition-delay: .9s
+
+
+        .message-content
+            position: relative
+            background: #7259cd
+            border-radius: 3px
+            padding: 20px 20px 12px
+            box-shadow: 0 0 150px 0 rgba(0,0,0,0.2)
+
+        .arrow
+            width: 0
+            height: 0
+            border-top: 8px solid transparent
+            border-bottom: 8px solid transparent
+            border-right: 8px solid #7259cd
+            display: block
+            position: absolute
+            top: 7px
+            left: -6px
+
+        .text
+            width: 30px
+            height: 5px
+            margin-bottom: 8px
+            background: #5d43b2
+            display: block
+            border-radius: 3px
+            transition: all .5s ease
+
+            &:nth-of-type(2)
+                transition-delay: .2s
+                width: 50%
+
+            &:nth-of-type(3)
+                width: 60%
+
+            &:nth-of-type(4)
+                width: 65%
+
+            &:nth-of-type(5)
+                width: 62%
+
+            &:nth-of-type(6)
+                width: 70%
+
+            &:nth-of-type(7)
+                width: 50%
+
+            &.title
+                width: 70%
+                margin-bottom: 12px
+                background: #4b3892

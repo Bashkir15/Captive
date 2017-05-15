@@ -3,10 +3,6 @@
     padding: 0 0 100px
     z-index: 2
 
-    .wrapper
-        width: auto
-        margin: 0 35px
-
     .bg
         position: absolute
         top: -170px
@@ -33,7 +29,7 @@
 
 .landing-help-content
     position: relative
-    max-width: 400px
+    width: 400px
     padding: 20px 30px 30px
     margin: 0 auto
     background: #fff
@@ -47,7 +43,7 @@
         z-index: 2
 
     .intro
-        width: 100%
+        width: 50%
 
         h3
             color: #64bbc5
@@ -110,3 +106,55 @@
         display: block
         padding-top: 6px
         font-size: 18px
+
+@media screen and (min-width: 1000px)
+    .landing-help-content
+        padding: 60px 70px 50px
+        width: auto
+
+        .inner
+            display: flex
+
+        .intro
+
+            p
+                display: block
+
+    .landing-help
+        padding: 60px 0 175px
+        
+        .bg
+            height: 160%
+
+            .band_1
+                display: block
+                width: 50%
+                top: 0
+                background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(246, 249, 252, 1) 100%)
+
+            .band_2
+                width: 90%
+                top: 245px
+
+            .band_3
+                display: block
+                width: 70%
+                opacity: 0.8
+                background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(246, 249, 252, 1) 100%)
+
+    .landing-help-links
+        width: 42%
+        padding: 15px 0 0
+
+        a
+            display: flex
+            align-items: center
+            height: 55px
+
+            img
+                position: relative
+                height: 40px
+                margin-right: 10px
+
+            span
+                padding-top: 0

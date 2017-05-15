@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.get('/cards', (req, res) => {
-    res.render('./views/cards');
+router.get('/packages', (req, res) => {
+    res.render('./views/packages/packages');
 });
 
 module.exports = router;

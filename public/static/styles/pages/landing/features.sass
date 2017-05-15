@@ -43,3 +43,68 @@
         font-weight: 500
         letter-spacing: 1px
         text-transform: uppercase
+
+@media screen and (min-width: 750px)
+    .landing-features .intro
+        display: flex
+        align-items: center
+
+    .landing-feature
+        display: flex
+        flex-direction: column
+        flex: 1
+        font-size: 15px
+        line-height: 1.5em
+        height: 350px
+        padding: 0
+        margin: 0 2%
+        text-align: left
+
+        &.design
+            background: none
+
+        &.development
+            background: none
+
+        &.support
+            background: none
+
+        h2
+            font-size: 17px
+            color: #1b222a
+            margin-top: 12px
+
+        p
+            color: #8895a6
+
+        .icon
+            margin: 0
+            display: block
+
+@media screen and (min-width: 1000px)
+    .landing-features
+        .features
+            width: 90%
+            margin: 0 auto
+
+@media screen and (min-width: 1350px)
+    .landing-features
+        .features
+            width: 60%
+            margin: 0 auto
+
+@media screen and (min-width: 1500px)
+    .landing-features
+        z-index: 5
+
+        .features
+            .landing-feature
+                z-index: 7
+                margin: 0 4%
+
+                p
+                    line-height: 24px
+                    font-size: 17px
+
+                h2
+                    font-size: 19px
