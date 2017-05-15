@@ -1,0 +1,101 @@
+.about-owners
+    padding: 85px 0
+
+    .intro
+        h2
+            font-size: 25px
+            letter-spacing: 1.4px
+            color: #2e223e
+
+        > p       
+            font-size: 17px
+            line-height: 25px
+            margin-bottom: 40px
+
+
+.owner-images
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    > div
+        position: relative
+        height: 350px
+        width: 100%
+        overflow: hidden
+        margin-bottom: 60px
+
+        img
+            height: 100%
+            width: 100%
+
+.owner-overlay
+    background: rgba(76, 57, 103, 0.7)
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+
+    > div
+        position: absolute
+        bottom: 10px
+        left: 20px
+        width: 100%
+
+        p
+            margin-bottom: 0
+            color: #fff
+
+        span
+            color: #fff
+
+
+@media screen and (min-width: 600px)
+    .about-owners
+        padding-top: 150px
+
+        .intro
+            width: 80%
+            margin: 0 auto
+
+@media screen and (min-width: 800px)
+    .about-owners
+        .intro
+            text-align: center
+            width: 70%
+
+    .owner-images
+        flex-direction: row
+
+        > div
+            width: 48%
+            
+            &:nth-of-type(1)
+                margin-right: 1%
+
+            &:nth-of-type(2)
+                margin-left: 1%
+
+
+@media screen and (min-width: 1100px)
+    .about-owners
+        .intro
+            > h2
+                width: 85%
+                margin: 0 auto 40px
+
+            > p
+                width: 85%
+                margin: 0 auto 30px
+
+    .owner-images
+        > div
+            text-align: left
+            width: 44%
+
+            &:nth-of-type(1)
+                margin-right: 3%
+
+            &:nth-of-type(2)
+                margin-left: 3%

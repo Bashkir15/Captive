@@ -6,6 +6,10 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
+router.get('/about', (req, res) => {
+    res.render('./views/about/about');
+});
+
 router.get('/packages', (req, res) => {
     res.render('./views/packages/packages');
 });
@@ -36,6 +40,10 @@ router.get('/demo/blog/right-sidebar', (req, res) => {
 
 router.get('/demo/blog/no-sidebar', (req, res) => {
     res.render('./views/demos/blog/no-sidebar');
+});
+
+router.get('/demo/food', (req, res) => {
+    res.render('./views/demos/food/index');
 });
 
 module.exports = router;
