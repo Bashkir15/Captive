@@ -1,15 +1,7 @@
-function init() {
-    const parallax = document.querySelector('.parallax');
-    const speed = 0.5;
+import slider from './landing/slider';
 
-    function handleScroll() {
-        let windowYOffset = window.pageYOffset;
-        let position = '50% ' + (windowYOffset * speed) + "px";
+export default function landing() {
+    const slides = document.querySelectorAll('.slide');
 
-        parallax.style.backgroundPosition = position;
-    }
-
-    window.addEventListener('scroll', handleScroll);
+    slider(slides);
 }
-
-init();

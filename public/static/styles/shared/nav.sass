@@ -1,6 +1,70 @@
+.nav 
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    width: 100%
+    align-items: stretch
+    background: transparent
+    height: 63px
+    z-index: 50
+    transition: all .4s ease-out
+
+
+.nav-left 
+    display: flex
+    flex: 1
+    flex-basis: 0
+    align-items: center
+    padding-left: 70px
+    justify-content: flex-start
+
+
+.nav-logo p 
+    font-family: 'Fira Sans'
+    font-size: 22px
+    font-weight: 400
+    letter-spacing: 2px
+    margin-bottom: 0
+    color: #fff
+
+
+.nav-right 
+    display: flex
+    flex: 1
+    flex-basis: 0
+    align-items: center
+    justify-content: flex-end
+    padding-right: 70px
+
+    .nav-item
+        display: none
+
+
+.nav-item 
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 5px 25px
+
+
+    a 
+        text-decoration: none
+        cursor: pointer
+        color: #fff
+        font-family: 'Lato'
+        font-weight: 500
+        font-size: 13px
+        text-transform: uppercase
+        letter-spacing: 1px
+        transition: color .4s ease-out
+
 .nav.nav-pinned
     transform: translateY(0)
     background: #fff
+
+    .nav-logo p
+        color: #5b7180
 
     a
         color: #5b7180
@@ -11,3 +75,9 @@
             
 .nav.nav-unpinned
     transform: translateY(-75px)
+
+
+@media screen and (min-width: 1100px)
+    .nav-right
+        .nav-item
+            display: flex

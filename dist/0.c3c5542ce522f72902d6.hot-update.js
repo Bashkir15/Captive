@@ -1,0 +1,11 @@
+webpackHotUpdate(0,{
+
+/***/ 3:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.default = slider;\nfunction slider(slides) {\n    var length = slides.length;\n    var activeSlide = 0;\n\n    function start() {\n        slides[0].classList.add('active');\n        activeSlide += 1;\n        setInterval(function () {\n            if (activeSlide + 1 !== length) {\n                slides[activeSlide].classList.add('active');\n                slides[activeSlide - 1].classList.remove('active');\n                activeSlide += 1;\n            } else {\n                activeSlide = slides[0];\n            }\n        }, 2500);\n    }\n\n    start();\n}//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9wdWJsaWMvc2NyaXB0cy9wYWdlcy9sYW5kaW5nL3NsaWRlci5qcz8zMTJkIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIHNsaWRlcihzbGlkZXMpIHtcbiAgICBjb25zdCBsZW5ndGggPSBzbGlkZXMubGVuZ3RoO1xuICAgIGxldCBhY3RpdmVTbGlkZSA9IDA7XG5cbiAgICBmdW5jdGlvbiBzdGFydCgpIHtcbiAgICAgICAgc2xpZGVzWzBdLmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScpO1xuICAgICAgICBhY3RpdmVTbGlkZSArPSAxO1xuICAgICAgICBzZXRJbnRlcnZhbCgoKSA9PiB7XG4gICAgICAgICAgICBpZiAoYWN0aXZlU2xpZGUgKyAxICE9PSBsZW5ndGgpIHtcbiAgICAgICAgICAgICAgICBzbGlkZXNbYWN0aXZlU2xpZGVdLmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScpO1xuICAgICAgICAgICAgICAgIHNsaWRlc1thY3RpdmVTbGlkZSAtIDFdLmNsYXNzTGlzdC5yZW1vdmUoJ2FjdGl2ZScpO1xuICAgICAgICAgICAgICAgIGFjdGl2ZVNsaWRlICs9IDE7XG4gICAgICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgICAgIGFjdGl2ZVNsaWRlID0gc2xpZGVzWzBdO1xuICAgICAgICAgICAgfVxuICAgICAgICB9LCAyNTAwKTtcbiAgICB9XG5cbiAgICBzdGFydCgpO1xufVxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBwdWJsaWMvc2NyaXB0cy9wYWdlcy9sYW5kaW5nL3NsaWRlci5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ })
+
+})
