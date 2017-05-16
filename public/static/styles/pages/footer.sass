@@ -7,8 +7,10 @@
         margin: 0 auto
 
 .footer-columns
-    width: 100%
+    width: 90%
+    margin-left: 5%
     display: flex
+    flex-direction: column
 
 
     h6
@@ -30,20 +32,20 @@
 .footer-col-2
     width: 20%
     display: inline-block
+    margin-bottom: 25px
 
     h6
         color: #b169cd
 
 .footer-col-3
     width: 20%
-    display: inline-block
+    display: none
 
     h6
         color: #e8724d
 
 .footer-col-4
     width: 45%
-    margin-left: 5%
     display: inline-block
 
     h6
@@ -138,7 +140,7 @@
     background: #22272e
 
 .footer-bottom
-    padding: 25px 0
+    padding: 25px 0 25px 5%
     background: #1c2127
 
     > div
@@ -161,3 +163,10 @@
 
     .highlight
         color: #e3ebf5
+
+@media screen and (min-width: 1100px)
+    .footer-columns
+        flex-direction: row
+
+    .footer-col-3
+        display: inline-block
