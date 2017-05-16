@@ -1,3 +1,5 @@
+
+
 .nav 
     position: fixed
     top: 0
@@ -10,6 +12,12 @@
     z-index: 50
     transition: all .4s ease-out
 
+    &.--open
+        z-index: 150
+        background: transparent
+
+        .nav-left
+            display: none
 
 .nav-left 
     display: flex
@@ -40,6 +48,70 @@
     .nav-item
         display: none
 
+    .nav-menu
+        position: relative
+        display: flex
+        align-items: center
+        cursor: pointer
+        transition-property: opacity
+        transition-duration: 0.15s
+        transition-timing-function: linear
+        overflow: visible
+        padding: 15px
+        z-index: 120
+        outline: none
+
+        .menu-box
+            width: 30px
+            height: 18px
+            display: inline-block
+            position: relative
+
+
+        &.is-active
+            .menu-inner
+                transition-delay: 0.22s
+                background-color: transparent
+
+                &:before
+                    top: -2px
+                    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.62, 0.355, 1)
+                    transform: translate3d(0, 12px, 0) rotate(45deg)
+
+                &:after
+                    top: -2px
+                    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1)
+                    translate3d(0, 12px, 0) rotate(-45deg)
+                    transform: translate3d(0, 12px, 0) rotate(-45deg)
+
+    .menu-inner
+        display: block
+        height: 3px
+        top: 2px
+        background-color: #fff
+        transition: background-color 0s 0.13s linear
+
+        &:before,
+        &:after
+            content: ""
+            display: block
+            height: 3px
+            width: 30px
+            background-color: #fff
+            border-radius: 4px
+            position: absolute
+            transition-property: transform
+            transition-duration: 0.15s
+            transition-timing-function: ease
+
+        &:before
+            top: 6px
+            transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
+        &:after
+            top: 12px
+            transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
 
 .nav-item 
     display: flex
@@ -63,6 +135,9 @@
     transform: translateY(0)
     background: #fff
 
+    &.--open
+        background: transparent
+
     .nav-logo p
         color: #5b7180
 
@@ -72,6 +147,23 @@
 
         &:hover
             color: #16232c
+
+
+    &:not(.--open)
+        .nav-right
+            .nav-menu
+                .menu-inner
+                    background: #5fade9
+
+                    &:before,
+                    &:after
+                        background: #5fade9
+
+    .nav-right
+        .nav-menu
+            .menu-inner
+                background-color: transparent
+
             
 .nav.nav-unpinned
     transform: translateY(-75px)
@@ -81,3 +173,6 @@
     .nav-right
         .nav-item
             display: flex
+
+        .nav-menu
+            display: none

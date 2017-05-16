@@ -11,75 +11,21 @@
         <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,800|Lato:300,500" rel="stylesheet">
         <link href='./static/styles/main.css' rel='stylesheet'>
-
-        <style>
-            .nav {
-                position: absolute;
-                top: 0;
-                left: 6%;
-                display: flex;
-                width: 88%;
-                margin: 0 auto;
-                align-items: stretch;
-                background: transparent;
-                height: 75px;
-                z-index: 50;
-            }
-
-            .nav-left {
-                display: flex;
-                flex: 1;
-                flex-basis: 0;
-                align-items: center;
-                padding-left: 70px;
-                justify-content: flex-start;
-            }
-
-            .nav-logo p {
-                font-family: 'Fira Sans';
-                font-size: 22px;
-                font-weight: 500;
-                letter-spacing: 2px;
-                margin-bottom: 0;
-                color: #fff;
-            }
-
-            .nav-right {
-                display: flex;
-                flex: 1;
-                flex-basis: 0;
-                align-items: center;
-                justify-content: flex-end;
-                padding-right: 70px;
-            }
-
-            .nav-item {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 5px 25px;
-            }
-
-            .nav-item a {
-                text-decoration: none;
-                cursor: pointer;
-                color: #fff;
-                font-family: 'Fira Sans';
-                font-weight: 500;
-                font-size: 15px;
-                letter-spacing: 2px;
-            }
-        </style>
     </head>
 
     <body>
-        <main>
+        <main style="overflow-x: hidden">
             <% include ../shared/nav %>
+            <% include ../shared/mobile-menu %>
 
-            <section class='about-page'>
+            <section class='about-page' style="overflow-x: hidden">
                 <% include ./header %>
                 <% include ./us %>
             </section>
+
+            <% include ../shared/footer %>
         </main>
+
+        <script src='./app.js'></script>
     </body>
 </html>
