@@ -115,13 +115,9 @@ p, span { font-family: 'Lato'; font-weight: 300; }
 
 p { margin: 0 0 20px; }
 
-.wrapper { margin: 0 auto; }
-
-.wrapper.narrow { width: 750px; }
+.wrapper { margin: 0 35px; width: auto; }
 
 .wrapper.standard { width: auto; margin: 0 35px; }
-
-.wrapper.wide { width: 1100px; }
 
 .band { position: absolute; width: 140%; height: 800px; z-index: 1; }
 
@@ -185,17 +181,27 @@ p { margin: 0 0 20px; }
 
 .icon.support { background: #7259cd; }
 
-@media screen and (min-width: 500px) { .wrapper.standard { width: auto; margin: 0 50px; } }
+@media screen and (min-width: 500px) { .wrapper { width: auto; margin: 0 50px; } }
 
-@media screen and (min-width: 1100px) { .wrapper.standard { width: 1000px; margin: 0 auto; } }
+@media screen and (min-width: 1100px) { .wrapper.narrow { width: 750px; margin: 0 auto; }
+  .wrapper.standard { width: 1000px; margin: 0 auto; }
+  .wrapper.wide { width: 1100px; margin: 0 auto; } }
 
-.landing-header { position: relative; width: 100%; padding: 80px 0 60px; background-image: url("../images/landing-main-header-background.jpg"); background-position: 0 50%; background-size: cover; -webkit-transition: -webkit-transform .75s ease; transition: -webkit-transform .75s ease; transition: transform .75s ease; transition: transform .75s ease, -webkit-transform .75s ease; }
+.nav.nav-pinned { -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); background: #fff; }
+
+.nav.nav-pinned a { color: #5b7180; -webkit-transition: color .4s ease-out; transition: color .4s ease-out; }
+
+.nav.nav-pinned a:hover { color: #16232c; }
+
+.nav.nav-unpinned { -webkit-transform: translateY(-75px); -ms-transform: translateY(-75px); transform: translateY(-75px); }
+
+.landing-header { position: relative; width: 100%; padding: 100px 0 60px; background-image: url("../images/landing-main-header-background.jpg"); background-position: 0 50%; background-size: cover; -webkit-transition: -webkit-transform .75s ease; transition: -webkit-transform .75s ease; transition: transform .75s ease; transition: transform .75s ease, -webkit-transform .75s ease; }
 
 .header-content { font-size: 17px; line-height: 1.4em; text-align: center; }
 
-.header-content h1 { margin-bottom: 22px; font-size: 30px; line-height: 1.1em; color: #fff; }
+.header-content h1 { margin-bottom: 22px; font-size: 30px; line-height: 40px; color: #fff; }
 
-.header-content p { padding: 0; color: rgba(255, 255, 255, 0.9); }
+.header-content p { padding: 0; line-height: 26px; color: rgba(255, 255, 255, 0.9); }
 
 .btn-link { display: inline-block; margin-top: 30px; background: #fff; color: #2c4960; text-decoration: none; }
 
@@ -265,7 +271,7 @@ p { margin: 0 0 20px; }
 
 .about-image img { position: absolute; display: block; width: auto; height: 400px; left: -25px; top: 0; z-index: 2; }
 
-.about-image p { position: absolute; left: 35px; bottom: 35px; margin: 0; color: #fff; font-size: 35px; line-height: 1em; font-weight: 400; font-family: 'Fira Sans'; text-transform: lowercase; z-index: 2; }
+.about-image p { position: absolute; left: 35px; bottom: 35px; margin: 0; color: #fff; font-size: 35px; line-height: 42px; font-weight: 400; font-family: 'Fira Sans'; text-transform: lowercase; z-index: 2; }
 
 @media screen and (min-width: 750px) { .about-image img { width: 100%; left: 0; } }
 
@@ -285,13 +291,13 @@ p { margin: 0 0 20px; }
 
 .landing-design-section .intro { width: 100%; color: #a0b1c5; }
 
-.landing-design-section .intro h2 { position: absolute; top: 14%; left: 88px; max-width: 150px; padding: 0; margin: 0; color: #62a0d1; font-size: 22px; line-height: 1.1em; letter-spacing: -.03em; }
+.landing-design-section .intro h2 { padding: 0; margin: 0; color: #62a0d1; font-size: 22px; line-height: 1.1em; letter-spacing: -.03em; }
 
 .landing-design-section .intro h3 { font-family: 'Lato'; font-weight: 500; color: #fff; }
 
 .landing-design-section .intro .btn { background: #4daaf2; color: #fff; }
 
-.landing-design-header { position: relative; min-height: 62px; padding-left: 88px; margin: 0 0 30px; }
+.landing-design-header { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 62px; padding-left: 88px; margin: 0 0 30px; }
 
 .landing-design-header img { position: absolute; top: 0; left: 0; height: auto; width: 62px; background: #4daaf2; border-radius: 100%; pointer-events: none; }
 

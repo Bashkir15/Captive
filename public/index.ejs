@@ -39,16 +39,16 @@
             }
 
             .nav {
-                position: absolute;
+                position: fixed;
                 top: 0;
-                left: 6%;
+                left: 0;
                 display: flex;
-                width: 88%;
-                margin: 0 auto;
+                width: 100%;
                 align-items: stretch;
                 background: transparent;
-                height: 75px;
+                height: 63px;
                 z-index: 50;
+                transition: all .4s ease-out;
             }
 
             .nav-left {
@@ -63,7 +63,7 @@
             .nav-logo p {
                 font-family: 'Fira Sans';
                 font-size: 22px;
-                font-weight: 500;
+                font-weight: 400;
                 letter-spacing: 2px;
                 margin-bottom: 0;
                 color: #fff;
@@ -89,10 +89,12 @@
                 text-decoration: none;
                 cursor: pointer;
                 color: #fff;
-                font-family: 'Fira Sans';
+                font-family: 'Lato';
                 font-weight: 500;
-                font-size: 15px;
-                letter-spacing: 2px;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: color .4s ease-out;
             }
 
             main {
@@ -242,5 +244,7 @@
                 <% include ./views/shared/footer %>
             </section>
         </main>
+
+        <script src='./app.js'></script>
     </body>
 </html>
